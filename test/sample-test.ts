@@ -9,6 +9,7 @@ describe("Greeter", function () {
     const GreeterFactory = <Greeter__factory>(
       await ethers.getContractFactory("Greeter")
     );
+
     const greeter = await GreeterFactory.deploy("Hello, world!");
     await greeter.deployed();
 
