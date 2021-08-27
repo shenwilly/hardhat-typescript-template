@@ -38,6 +38,8 @@
     "ethers": "^5.4.5",
     "hardhat": "^2.6.1",
     "hardhat-gas-reporter": "^1.0.4",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "prettier-plugin-solidity": "^1.0.0-beta.17",
     "solhint": "^3.3.6",
@@ -46,5 +48,19 @@
     "ts-node": "^10.2.1",
     "typechain": "^5.1.2",
     "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "**/*.sol": [
+      "yarn lint:sol:prettier:fix"
+    ],
+    "test/**": [
+      "yarn lint:tests:prettier:fix"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
