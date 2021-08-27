@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "hardhat-typescript-template",
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "npx hardhat clean",
