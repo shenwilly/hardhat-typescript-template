@@ -7,7 +7,9 @@
     "test": "npx hardhat test",
     "coverage": "npm run build && npx hardhat coverage --temp artifacts",
     "verify": "npx hardhat verify",
+    "lint:sol": "solhint -f table contracts/**/*.sol",
     "lint:tests": "eslint 'test/**/*.ts'",
+    "lint:prettier:sol:fix": "prettier --write 'contracts/**/*.sol'",
     "lint:prettier:tests:fix": "prettier --write 'test/**/*.ts'",
     "lint:prettier:tasks:fix": "prettier --write 'tasks/**/*.ts'",
     "lint:prettier:scripts:fix": "prettier --write 'scripts/**/*.ts'"
@@ -39,6 +41,7 @@
     "prettier": "^2.3.2",
     "prettier-plugin-solidity": "^1.0.0-beta.17",
     "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "^0.0.5",
     "solidity-coverage": "^0.7.16",
     "ts-node": "^10.2.1",
     "typechain": "^5.1.2",
