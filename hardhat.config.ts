@@ -59,7 +59,7 @@ const config: HardhatUserConfig = {
     // apiKey: ETHERSCAN_API_KEY,
   // },
   gasReporter: {
-    enabled: true,
+    enabled: false,
     currency: 'eth',
   },
   mocha: {
