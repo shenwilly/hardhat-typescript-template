@@ -52,12 +52,18 @@
   },
   "lint-staged": {
     "**/*.sol": [
-      "yarn lint:sol:prettier:fix"
+      "yarn lint:prettier:sol:fix"
     ],
     "test/**": [
-      "yarn lint:tests:prettier:fix"
+      "yarn lint:prettier:tests:fix"
     ],
-    "*.js": "eslint --cache --fix"
+    "tasks/**": [
+      "yarn lint:prettier:tasks:fix"
+    ],
+    "scripts/**": [
+      "yarn lint:prettier:scripts:fix"
+    ],
+    "*.{js,ts}": "eslint --cache --fix"
   },
   "husky": {
     "hooks": {
